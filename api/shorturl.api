@@ -1,0 +1,38 @@
+info(
+	title: API for Shorturl
+	desc: A API for Shorturl
+	author: "Elton Zheng"
+	email: "elton.zheng.sh@gmail.com"
+)
+
+type (
+	shortenReq struct {
+		url string `from:"url"`
+	}
+	shortenResp struct {
+		shorten string `json:"shorten"`
+	}
+)
+
+type (
+	expandReq struct {
+		shorten string `from:"shorten"`
+	}
+
+	expandResp struct {
+		url string `json:"url"`
+	}
+)
+
+service shorturl-api {
+	@server(
+		handler: ShortenHandler
+	)
+	get /shorten(shortenReq) returns(shortenResp)
+
+	@server(
+		handler: ExpandHandler
+	)
+	get /expand(expandReq) returns(expandResp)
+}
+
