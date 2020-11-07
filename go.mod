@@ -45,7 +45,7 @@ require (
 	github.com/prometheus/client_golang v1.5.1 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/stretchr/testify v1.5.1 // indirect
-	github.com/tal-tech/go-zero v1.0.23
+	github.com/tal-tech/go-zero v1.0.25
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20171017195756-830351dc03c6 // indirect
 	github.com/urfave/cli v1.22.4 // indirect
 	github.com/xwb1989/sqlparser v0.0.0-20180606152119-120387863bf2 // indirect
